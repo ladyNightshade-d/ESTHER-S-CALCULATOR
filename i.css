@@ -1,0 +1,67 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+background-color: lightblue;
+
+}
+.calculator{
+    background-color: black;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 60px;
+}
+.calculator form input{
+    padding: 18px;
+    border-radius: 5px;
+    border: 0;
+    color: white;
+    outline: 0;
+    box-shadow:-8px -8px 15px rgba(255,255,255,0.1) , 5px 5px 15px rgba(0,0,0,0.2);
+    background-color: transparent;
+    font-size: 20px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+
+
+form.display{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+    font-size: 145px;
+    padding: 80px 80px;
+
+}
+form.display input{
+    text-align: right;
+    box-shadow:none;
+    flex:1 ;
+    font-size: 70px;
+    padding: 80px 80px;
+}
+.calculator form input.bg-btn {
+    font-size: 30px !important;
+    padding: 10px !important;
+    width: 400px !important;
+    height: 60px !important; /* Add this to override previous height rule */
+    box-shadow: none !important;
+    background-color: #fff !important; /* or whatever color you want */
+    color: #222 !important;
+}
+.operator{
+    background-color:gray !important;
+}
+.calculator form input.equal{
+    width:200px !important;
+    padding:20px !important;
+    background-color: black !important;
+}
