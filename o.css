@@ -1,0 +1,48 @@
+body{
+    background:lightblue;
+    border: 2px dashed blue;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size:16px;
+
+}
+form{
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    background-color: lightgreen;
+    padding: 70px;
+    border-radius: 30px;
+    width: 500px;
+    margin: auto;
+}
+form input{
+    font-size:40px;
+    font-weight: bold;
+    font-family:arial, sans-serif;
+
+
+}
+form input:focus{
+    outline:none;
+
+}
+.submit {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.submit:hover {
+    background-color: lightblue;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}

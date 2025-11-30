@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset = "UTF-8">
+<title> STUDENT IDENTIFICATION FORM </title>
+    <head> STUDENT IDENTIFICATION FORM </head>
+    <body>
+    <form method="POST">
+    <label for = "fname" > FISRT NAME </label>
+    <input type="text" name="fname" id="fname" placeholder="Enter your first name" required> <br><br>
+    <label for = "lname" > LAST NAME </label>
+    <input type="text" name="lname" id="lname" placeholder="Enter your Last name" required><br><br>
+    <label for = "email" > EMAIL </label>
+    <input type="text" name="email" id="email" placeholder="Enter your Email" required><br><br>
+    <label for = "phone number" > PHONE NUMBER </label>
+    <input type="text" name="phone number" id="phone number" placeholder="Enter your Phone number" required><br><br>
+    <label for = "class" > GRADE</label>
+    <input type="text" name="class" id="class" placeholder="Enter your grade" required><br><br>
+    <br><br>
+    <label>GENDER</label>
+    <label for="male"> Male</label>
+    <input type="radio" name="gender" id="male"><br>
+    <label for="female"> Female</label>
+    <input type="radio" name="gender" id="female">
+    <br><br>
+    <label for="dob"> DATE OF BIRTH </label>
+    <input type="number" name="dob" id="dob" value="DATE OF BIRTH" required>
+    <br><br>
+    <select name="nationality" id="nationality" required>
+    <option name="Rwanda" id="Rwanda">Rwanda</option>
+    <option name="Burundi" id="Burundi">Burundi</option>
+    <option name="D.R.Congo" id="D.R.Congo">D.R.Congo</option>
+    <option name="Tanzania" id="Tanzania">Tanzania</option>
+    <option name="Uganda" id="Uganda">Uganda</option>
+    </select>
+    <br><br>
+    <label> SPOKEN LANGUAGES </label>
+    <label><input type="checkbox" name="language[]" value="English">English</label>
+    <label><input type="checkbox" name="language[]" value="Kinyarwanda">Kinyarwanda</label>
+    <label><input type="checkbox" name="language[]" value="French">French</label>
+    <label><input type="checkbox" name="language[]" value="kiswahili">Kiswahili</label>
+    <label><input type="checkbox" name="language[]" value="Spanish">Spanish</label>
+    <label><input type="checkbox" name="language[]" value="Germany">Germany</label>
+    <br><br>
+    </form>
+    </body>
+    </html>

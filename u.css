@@ -1,0 +1,39 @@
+.button{
+    background: black;
+    width: 200px;
+    height: 35px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+.case{
+    background: lightblue;
+    width: 400px;
+    height: 350px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 50px;
+    font-weight: bold;
+
+}
+form input.are{
+    background: black;
+    width: 70px;
+    height: 35px;
+}
+form input{
+    background: lightblue;
+    width: 200px;
+    height: 50px;
+    font-size: 40px;
+    color: blue;
+}
+body{
+    background: red;
+}

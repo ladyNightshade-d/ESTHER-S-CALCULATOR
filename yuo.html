@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CONVERTER.</title>
+</head>
+<body>
+<form method="POST">
+    <input type="number" name="temp" id="number" placeholder="Enter your temperature here">
+    <select name="from" id="from">
+        <option value="fahrenheit">Fahrenheit</option>
+        <option value="celsius">Celsius</option>
+    </select>
+    <select name="to" id="to">
+        <option value="fahrenheit">Fahrenheit</option>
+        <option value="celsius">Celsius</option>
+    </select>
+    <button type="submit" id="submit">Convert</button>
+</form>
+<?php
+if(isset($_POST['temp'])){
+$temp=$_POST['temp'];
+$from=$_POST['from'];
+$to=$_POST['to'];
+
+if($from=="$fahrenheit" && $to=="$celsius"){
+$answer=($temp-32) * 5/9;
+echo" $answer";
+}
+elseif($from=="$celsius" && $to=="$fahrenheit"){
+$answer=($temp * 9/5)+32;
+  echo "$answer";
+}
+elseif($from == $to){
+        echo " (Same unit selected)";
+}
+}
+?>
+</body>
+</html>
