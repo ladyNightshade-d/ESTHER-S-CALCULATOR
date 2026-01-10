@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Microsoft Security – Job Application</title>
+   <style>
+
+
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background-color: #e9a1a1;
+      color: #000000;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;       /* centers children horizontally */
+      flex-direction: column;
+      min-height: 100vh;
+      background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2Kd9Ca2PCbPgwVIhav4rTK_FjskMgYXRlLQ&s);
+      color:black
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1000px;
+      padding: 20px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;       /* center child content */
+      border:3px solid #000;;
+      border-radius:8px;
+      margin-top:20px;
+      background-color: #eee;
+    }
+
+    nav {
+      margin-bottom: 10px;
+    }
+
+    nav button {
+      margin: 0 6px;
+      background: #eee;
+      border: 1px solid #ccc;
+      padding: 6px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #000;
+      display: inline-block;
+    }
+    .submit {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      padding: 5px;
+      background-color: rgb(171, 200, 193);
+      height: 40px;
+      width: 150px;
+      border-radius: 8px;
+      border: 2px solid black;
+      font-size: 16px;
+      cursor: pointer;
+
+      
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Microsoft Security</h1>
+    <nav>
+      <button><a href="index.html">Home</a> </button>
+      <button><a href="about.html">About</a> </button>
+      <button><a href="contact.html">Contact</a> </button>
+      <button><a href="job-application.html">Job Application</a></button>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Job Application Form</h2>
+    <form>
+      <h3 style="padding: 10px; color: brown;">Position Information</h3>
+      <label for="position"><strong>Position applied for:</strong></label><br>
+      <input type="text" id="position" name="position"><br><br>
+
+      <h3 style="padding: 10px; color: brown;">Personal Information</h3>
+      <label for="fullName"><strong>Full name:</strong></label><br>
+      <input type="text" id="fullName" name="fullName"><br><br>
+
+      <label for="email"><strong>Email address:</strong></label><br>
+      <input type="email" id="email" name="email"><br><br>
+
+      <label for="phone"><strong>Phone number:</strong></label><br>
+      <input type="tel" id="phone" name="phone"><br><br>
+
+      <h3 style="padding: 10px; color: brown;">Education</h3>
+      <label for="educationLevel"><strong>Highest level of education:</strong></label><br>
+      <input type="text" id="educationLevel" name="educationLevel"><br><br>
+
+      <label for="fieldOfStudy"><strong>Field of study:</strong></label><br>
+      <input type="text" id="fieldOfStudy" name="fieldOfStudy"><br><br>
+
+      <h3 style="padding: 10px; color: brown;">Experience</h3>
+      <label for="experienceYears"><strong>Years of experience in IT / cybersecurity:</strong></label><br>
+      <input type="number" id="experienceYears" name="experienceYears" min="0"><br><br>
+      
+      <label for="recentRole"><strong>Most recent role / job title:</strong></label><br>
+      <input type="text" id="recentRole" name="recentRole"><br><br>
+
+      <label for="experienceSummary"><strong>Brief summary of relevant experience:</strong></label><br>
+      <textarea id="experienceSummary" name="experienceSummary" rows="10" cols="70"></textarea><br><br>
+          <!-- Skills -->
+      <h3 style="padding: 10px; color: brown;">Technical and Security Skills</h3>
+      <label for="skills"><strong>List key technical skills (e.g. networking, Linux, scripting, security tools):</strong></label><br>
+      <textarea id="skills" name="skills" rows="7" cols="80"></textarea><br><br>
+
+      <label for="certifications"><strong>Relevant certifications (if any):</strong></label><br>
+      <textarea id="certifications" name="certifications" rows="7" cols="80"></textarea><br><br>
+
+      <h3 style="padding: 10px; color: brown;">Motivation</h3>
+      <label for="motivation"><strong>Why do you want to work at Microsoft Security?</strong></label><br>
+      <textarea id="motivation" name="motivation" rows="10" cols="70"></textarea><br><br>
+
+      <label for="contribution"><strong>How do you think you can contribute to protecting customers from cyberthreats?</strong></label><br>
+      <textarea id="contribution" name="contribution" rows="10" cols="80"></textarea><br><br>
+          <!-- Availability -->
+      <h3 style="padding: 10px; color: brown;">Availability</h3>
+      <label for="startDate"><strong>Earliest available start date:</strong></label><br>
+      <input type="date" id="startDate" name="startDate"><br><br>
+          <!-- Declaration -->
+      <h3 style="padding: 10px; color: brown;">Declaration</h3>
+      <label>
+      <input type="checkbox" name="declaration">
+      I confirm that the information provided in this application is true and complete.
+      </label><br><br>
+
+      <button type="submit"class="submit">Submit Application</button>
+    </form>
+  </main>
+</body>
+</html>

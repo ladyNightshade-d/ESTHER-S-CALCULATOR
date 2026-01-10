@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <h1>Student Access Inquiry.</h1>
+    <form method="post" action="#">
+        <label>First Name<input type="text" name="firstname" required></label><br><br>
+        <label>Last Name<input type="text" name="lastname" required></label><br><br>
+        <label>Email<input type="text" name="email" required></label><br><br>
+        <label>Gender</label><br><br>
+        <label><input type="radio" name="gender" value="male">Male</label><br>
+        <laabel><input type="radio" name="gender" value="female">Female</laabel><br>
+        <br><br>
+        <label>Spoken languages.</label><br><br>
+        <label><input type="checkbox" name="language[]" value="Kinyarwanda">Kinyarwanda</label><br><br>
+        <label><input type="checkbox" name="language[]" value="Kiswahili">Kiswahili</label><br><br>
+        <label><input type="checkbox" name="language[]" value="English">English</label><br><br>
+        <label><input type="checkbox" name="language[]" value="French">French</label><br><br>
+        <label>Level</label><br><br>
+        <select name="level">
+            <option value="level 1">level 1</option>
+            <option value="level 2">level 2</option>
+            <option value="level 3">level 3</option>
+            <option value="level 4">level 4</option>
+        </select>
+        <br><br>
+        <label>Password</label>
+        <input type="text" name="Password"><br><br>
+        <label>Request</label>
+        <textarea name="request" type="text" rows="10" cols="80"></textarea>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+    
+</body>
+</html>

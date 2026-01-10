@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Microsoft Security – Contact</title>
+  <style>
+    :root {
+      --bg-dark: #050816;
+      --accent: #00d4ff;
+      --text-main: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: radial-gradient(circle at top, #141a3a, var(--bg-dark)),
+                  url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfW3cfDjy4544sh9LgjMU3Cp4H3lGfUicfLQ&s);
+      background-size: cover;
+      background-attachment: fixed;
+      backdrop-filter: blur(2px);
+    }
+
+    header {
+      width: 100%;
+      max-width: 1100px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 10px 0;
+      font-size: 26px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav button {
+      margin: 0 6px;
+      background: rgba(10, 10, 20, 0.8);
+      border: 1px solid rgba(0, 212, 255, 0.2);
+      padding: 6px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    nav button:hover {
+      transform: translateY(-2px) scale(1.05);
+      box-shadow: 0 0 18px rgba(0, 212, 255, 0.2);
+      border-color: var(--accent);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 650px;
+      padding: 0 20px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card {
+      margin-top: 20px;
+      width: 100%;
+      border-radius: 16px;
+      padding: 22px 24px;
+      background: rgba(5, 8, 22, 0.96);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.7);
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    h2, h3 {
+      margin-top: 0;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    a.contact-link {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a.contact-link:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        padding: 0 14px 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Microsoft Security</h1>
+    <nav>
+      <button><a href="index1.html">Home</a></button>
+      <button><a href="about1.html">About</a></button>
+      <button><a href="contact1.html">Contact</a></button>
+      <button><a href="job-application1.html">Job Application</a></button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Contact Information</h2>
+      <p>Use the details below to reach the Microsoft Security team for general inquiries and cybersecurity support.</p>
+
+      <h3>General Contact</h3>
+      <p>Email: <a class="contact-link" href="mailto:info@microsoftsecurity.example">info@microsoftsecurity.example</a></p>
+      <p>Phone: +123 456 566 456</p>
+
+      <h3>Office Address</h3>
+      <p>Microsoft Headquarters<br>
+         Redmond, Washington<br>
+         United States
+      </p>
+    </section>
+  </main>
+</body>
+</html>

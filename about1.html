@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Microsoft Security – About</title>
+  <style>
+    :root {
+      --bg-dark: #050816;
+      --accent: #00d4ff;
+      --card-bg: #0b1020;
+      --text-main: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: radial-gradient(circle at top, #141a3a, var(--bg-dark)),
+                  url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjyGUzsx-RoCJMGb7SDzNY8pWVy-2l4-ZYVg&s");
+      background-size: cover;
+      background-attachment: fixed;
+      backdrop-filter: blur(2px);
+    }
+
+    header {
+      width: 100%;
+      max-width: 1100px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 10px 0;
+      font-size: 26px;
+      text-transform: uppercase;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav button {
+      margin: 0 6px;
+      background: rgba(10, 10, 20, 0.8);
+      border: 1px solid rgba(0, 212, 255, 0.2);
+      padding: 6px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    nav button:hover {
+      transform: translateY(-2px) scale(1.05);
+      box-shadow: 0 0 18px rgba(0, 212, 255, 0.2);
+      border-color: var(--accent);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1000px;
+      padding: 0 20px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .bye {
+      margin-top: 20px;
+      background: rgba(5, 8, 22, 0.96);
+      border-radius: 16px;
+      padding: 22px 24px;
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #ffffff;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 15px;
+      color: #e4e4f5;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 16px auto 0;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th,
+    td {
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 10px 12px;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    th {
+      background: rgba(0, 212, 255, 0.08);
+    }
+
+    tr:nth-child(even) {
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .accordion-toggle {
+      margin-top: 18px;
+      padding: 8px 14px;
+      border-radius: 20px;
+      border: 1px solid rgba(0, 212, 255, 0.3);
+      background: transparent;
+      color: var(--accent);
+      cursor: pointer;
+      font-size: 13px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.25s ease;
+    }
+
+    .accordion-toggle:hover {
+      background: rgba(0, 212, 255, 0.12);
+      transform: translateY(-1px);
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+
+    .accordion-content.open {
+      max-height: 600px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        padding: 0 12px 30px;
+      }
+
+      header {
+        padding: 16px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Microsoft Security</h1>
+    <nav>
+      <button><a href="index1.html">Home</a></button>
+      <button><a href="about1.html">About</a></button>
+      <button><a href="contact1.html">Contact</a></button>
+      <button><a href="job-application1.html">Job Application</a></button>
+    </nav>
+  </header>
+
+  <div class="container">
+    <main>
+      <div class="bye">
+        <h2>About Microsoft Security</h2>
+        <p>Microsoft Security is the cybersecurity division of Microsoft, delivering integrated protection across identities, endpoints, email, cloud, and workloads.</p>
+        <p>By combining AI, threat intelligence, and Zero Trust principles, Microsoft Security helps organizations reduce risk, respond faster, and build digital trust.</p>
+
+        <button class="accordion-toggle" id="toggleTable">
+          <span>▼</span> View company overview details
+        </button>
+
+        <div class="accordion-content" id="accordionContent">
+          <h2>Microsoft Security – Company Overview</h2>
+          <table>
+            <tr>
+              <th>Aspect</th>
+              <th>Information</th>
+            </tr>
+            <tr>
+              <td>Name</td>
+              <td>Microsoft Security</td>
+            </tr>
+            <tr>
+              <td>Parent company</td>
+              <td>Microsoft Corporation</td>
+            </tr>
+            <tr>
+              <td>Type</td>
+              <td>Cybersecurity division providing integrated security solutions</td>
+            </tr>
+            <tr>
+              <td>Core role</td>
+              <td>Protects organizations and users from cyberthreats across Microsoft platforms</td>
+            </tr>
+            <tr>
+              <td>Key solution areas</td>
+              <td>Identity and access security, endpoint protection, cloud security, threat detection and response</td>
+            </tr>
+            <tr>
+              <td>Flagship products</td>
+              <td>Microsoft Defender, Microsoft Sentinel, Microsoft Defender for Cloud</td>
+            </tr>
+            <tr>
+              <td>Key technologies used</td>
+              <td>Artificial intelligence, cloud computing, threat intelligence, Zero Trust security model</td>
+            </tr>
+            <tr>
+              <td>Primary customers</td>
+              <td>Enterprises, SMBs, public sector organizations, and educational institutions</td>
+            </tr>
+            <tr>
+              <td>Main objective</td>
+              <td>To strengthen cybersecurity and build digital trust by reducing the risk and impact of cyberattacks</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('toggleTable');
+    const content = document.getElementById('accordionContent');
+    toggle.addEventListener('click', () => {
+      content.classList.toggle('open');
+      const icon = toggle.querySelector('span');
+      icon.textContent = content.classList.contains('open') ? '▲' : '▼';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Microsoft Security – Job Application</title>
+  <style>
+    :root {
+      --bg-dark: #050816;
+      --accent: #00d4ff;
+      --accent-soft: rgba(0, 212, 255, 0.2);
+      --text-main: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: radial-gradient(circle at top, #141a3a, var(--bg-dark)),
+                  url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2Kd9Ca2PCbPgwVIhav4rTK_FjskMgYXRlLQ&s);
+      background-size: cover;
+      background-attachment: fixed;
+      backdrop-filter: blur(2px);
+    }
+
+    header {
+      width: 100%;
+      max-width: 1100px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 10px 0;
+      font-size: 26px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav button {
+      margin: 0 6px;
+      background: rgba(10, 10, 20, 0.8);
+      border: 1px solid var(--accent-soft);
+      padding: 6px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    nav button:hover {
+      transform: translateY(-2px) scale(1.05);
+      box-shadow: 0 0 18px var(--accent-soft);
+      border-color: var(--accent);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    main {
+      width: 100%;
+      max-width: 900px;
+      padding: 0 20px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    form {
+      margin-top: 20px;
+      width: 100%;
+      background: rgba(5, 8, 22, 0.96);
+      border-radius: 16px;
+      padding: 22px 24px;
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    h3 {
+      padding: 10px 0;
+      color: #ffb86c;
+      margin-bottom: 4px;
+    }
+
+    label {
+      font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="date"],
+    textarea {
+      width: 100%;
+      padding: 8px 10px;
+      margin-top: 4px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(5, 8, 22, 0.9);
+      color: var(--text-main);
+      font-family: inherit;
+      font-size: 14px;
+      transition: border 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px var(--accent-soft);
+    }
+
+    .field-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px 18px;
+    }
+
+    .submit {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 16px auto 0;
+      padding: 8px 20px;
+      background-color: rgb(23, 183, 150);
+      height: 42px;
+      min-width: 160px;
+      border-radius: 999px;
+      border: 2px solid black;
+      font-size: 16px;
+      cursor: pointer;
+      color: #000000;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.7);
+      background-color: rgb(18, 165, 136);
+    }
+
+    .error {
+      border-color: #ff5555 !important;
+      box-shadow: 0 0 0 1px rgba(255, 85, 85, 0.5);
+    }
+
+    .success-message {
+      margin-top: 16px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: rgba(46, 204, 113, 0.1);
+      border: 1px solid rgba(46, 204, 113, 0.7);
+      color: #a9ffcb;
+      font-size: 14px;
+      display: none;
+    }
+
+    .success-message.show {
+      display: block;
+    }
+
+    .hint {
+      font-size: 12px;
+      opacity: 0.7;
+      margin-top: -8px;
+      margin-bottom: 12px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 700px) {
+      main {
+        padding: 0 12px 30px;
+      }
+
+      form {
+        padding: 18px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Microsoft Security</h1>
+    <nav>
+      <button><a href="index1.html">Home</a></button>
+      <button><a href="about1.html">About</a></button>
+      <button><a href="contact1.html">Contact</a></button>
+      <button><a href="job-application1.html">Job Application</a></button>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Job Application Form</h2>
+    <form id="applicationForm" novalidate action="mailto:estheruwasemugisha@gmail.com" method="POST" enctype="text/plain"></form>
+      <h3>Position Information</h3>
+      <label for="position"><strong>Position applied for:</strong></label>
+      <input type="text" id="position" name="position" required>
+
+      <h3>Personal Information</h3>
+      <div class="field-row">
+        <div>
+          <label for="fullName"><strong>Full name:</strong></label>
+          <input type="text" id="fullName" name="fullName" required>
+        </div>
+        <div>
+          <label for="email"><strong>Email address:</strong></label>
+          <input type="email" id="email" name="email" required>
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div>
+          <label for="phone"><strong>Phone number:</strong></label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div>
+          <label for="startDate"><strong>Earliest available start date:</strong></label>
+          <input type="date" id="startDate" name="startDate" required>
+        </div>
+      </div>
+
+      <h3>Education</h3>
+      <div class="field-row">
+        <div>
+          <label for="educationLevel"><strong>Highest level of education:</strong></label>
+          <input type="text" id="educationLevel" name="educationLevel">
+        </div>
+        <div>
+          <label for="fieldOfStudy"><strong>Field of study:</strong></label>
+          <input type="text" id="fieldOfStudy" name="fieldOfStudy">
+        </div>
+      </div>
+
+      <h3>Experience</h3>
+      <label for="experienceYears"><strong>Years of experience in IT / cybersecurity:</strong></label>
+      <input type="number" id="experienceYears" name="experienceYears" min="0">
+
+      <label for="recentRole"><strong>Most recent role / job title:</strong></label>
+      <input type="text" id="recentRole" name="recentRole">
+
+      <label for="experienceSummary"><strong>Brief summary of relevant experience:</strong></label>
+      <textarea id="experienceSummary" name="experienceSummary" rows="6"></textarea>
+
+      <h3>Technical and Security Skills</h3>
+      <label for="skills"><strong>List key technical skills (e.g. networking, Linux, scripting, security tools):</strong></label>
+      <textarea id="skills" name="skills" rows="5"></textarea>
+
+      <label for="certifications"><strong>Relevant certifications (if any):</strong></label>
+      <textarea id="certifications" name="certifications" rows="4"></textarea>
+
+      <h3>Motivation</h3>
+      <label for="motivation"><strong>Why do you want to work at Microsoft Security?</strong></label>
+      <textarea id="motivation" name="motivation" rows="6" required></textarea>
+
+      <label for="contribution"><strong>How do you think you can contribute to protecting customers from cyberthreats?</strong></label>
+      <textarea id="contribution" name="contribution" rows="6" required></textarea>
+
+      <h3>Declaration</h3>
+      <label class="hint">You must confirm the information is accurate before submitting.</label>
+      <label>
+        <input type="checkbox" name="declaration" id="declaration"> I confirm that the information provided in this application is true and complete.
+      </label>
+
+      <button type="submit" class="submit">Submit Application</button>
+      <div class="success-message" id="successMessage">
+        Thank you! Your application has been submitted successfully.
+      </div>
+    </form>
+  </main>
+
+  <script>
+    const form = document.getElementById('applicationForm');
+    const successMessage = document.getElementById('successMessage');
+
+    function markError(field, hasError) {
+      if (hasError) {
+        field.classList.add('error');
+      } else {
+        field.classList.remove('error');
+      }
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      let valid = true;
+
+      const requiredFields = [
+        'position',
+        'fullName',
+        'email',
+        'phone',
+        'startDate',
+        'motivation',
+        'contribution'
+      ];
+
+      requiredFields.forEach(id => {
+        const field = document.getElementById(id);
+        if (!field.value.trim()) {
+          markError(field, true);
+          valid = false;
+        } else {
+          markError(field, false);
+        }
+      });
+
+      const emailField = document.getElementById('email');
+      const emailValue = emailField.value.trim();
+      const emailRegex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+      if (!emailRegex.test(emailValue)) {
+        markError(emailField, true);
+        valid = false;
+      }
+
+      const declaration = document.getElementById('declaration');
+      if (!declaration.checked) {
+        declaration.focus();
+        valid = false;
+      }
+
+      if (!valid) {
+        successMessage.classList.remove('show');
+        return;
+      }
+
+      successMessage.classList.add('show');
+      form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      setTimeout(() => {
+        successMessage.classList.remove('show');
+        form.reset();
+      }, 4000);
+    });
+  </script>
+</body>
+</html>
